@@ -1,11 +1,11 @@
 <?php
 
-namespace htlwy\album;
+namespace htlwy\thumbs;
 
 /**
  * Class Resize
  * Wird von `ImgResize` dazu verwendet, um alte und neue Groesse des Fotos zu speichern.
- * @package htlwy\album
+ * @package htlwy\thumbs
  */
 class Resize
 {

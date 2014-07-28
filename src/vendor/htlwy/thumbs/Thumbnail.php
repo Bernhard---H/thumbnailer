@@ -1,6 +1,6 @@
 <?php
 
-namespace htlwy\album;
+namespace htlwy\thumbs;
 
 use htlwy\files\Files;
 use htlwy\Logger;
@@ -30,7 +30,7 @@ use htlwy\Logger;
  *     // Seitenverhaeltnis wird immer eingehalten,
  *     // alle ausgegebenen Bilder sind JPEG,
  *     // Thumbs werden (meist) erst auf verlangen des Browsers erstellt
- *     $thumbnailer = new \htlwy\album\Thumbnail(new \htlwy\album\Size(200, 400));
+ *     $thumbnailer = new \htlwy\thumbs\Thumbnail(new \htlwy\thumbs\Size(200, 400));
  *
  *     $dbh = pdo_connect();
  *     $stmt = $dbh->query("SELECT path, alt FROM irgendWelcheBilder WHERE a = b");
@@ -122,7 +122,7 @@ class Thumbnail extends ImgResize
      *                       ersten Zeichen des Hash-Wertes
      * @param bool $noPromise Gibt an ob die Funktion als Pfad eine Promise-URI zurückgeben darf
      *
-     * @internal param \htlwy\album\Size $size Temporaer zu verwendendes `Size`-Objekt
+     * @internal param \htlwy\thumbs\Size $size Temporaer zu verwendendes `Size`-Objekt
      * @return string Pfad zum Thumbnail; kann direkt in `<img>` Element
      *        eingesetzt werden.
      */

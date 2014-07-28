@@ -2,7 +2,7 @@
 
 namespace htlwy;
 
-use htlwy\album\Resize;
+use htlwy\thumbs\Resize;
 
 /**
  * Class MemoryLimit
@@ -23,7 +23,7 @@ class MemoryLimit
      * eines Bildes und passt das Memorylimit entsprechend an oder wirft eine Exception, wenn dieses nicht
      * mehr angehoben werden kann.
      *
-     * @param \htlwy\album\Resize $size
+     * @param \htlwy\thumbs\Resize $size
      */
     public function picture(Resize $size)
     {

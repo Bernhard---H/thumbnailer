@@ -1,6 +1,6 @@
 <?php
 
-namespace htlwy\album;
+namespace htlwy\thumbs;
 
 /**
  * Wird benoetigt um die Groesse eines Thumbnails festzulegen.

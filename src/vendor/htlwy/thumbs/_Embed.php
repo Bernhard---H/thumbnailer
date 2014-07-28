@@ -1,6 +1,6 @@
 <?php
 
-namespace htlwy\album;
+namespace htlwy\thumbs;
 
 
 /**

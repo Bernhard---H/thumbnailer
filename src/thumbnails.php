@@ -5,7 +5,7 @@
 chdir(__DIR__);
 require_once('./inc/conf.php');
 
-use \htlwy\album\Cleanup;
+use \htlwy\thumbs\Cleanup;
 
 new Cleanup();
 

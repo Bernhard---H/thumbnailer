@@ -7,7 +7,7 @@ namespace htlwy;
  * Wird von ImgResize verwendet um anzuzeigen, dass fuer die Berechnung der zur verfuegung
  * stehende Arbeitsspeicher nicht ausreichen wird.
  *
- * @package htlwy\album
+ * @package htlwy\thumbs
  */
 class OutOfMemoryException extends \Exception
 {
