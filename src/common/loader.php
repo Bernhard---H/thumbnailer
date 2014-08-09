@@ -1,8 +1,12 @@
 <?php
 /**
- * Loads all classes in the vendor directory
+ * Loads all classes from the vendor and lib directories
  */
 
+/**
+ * RedBeansPHP 4
+ */
+require_once __DIR__.'/lib/rb.php';
 
 /**
  * Autoloader for classes in the vendor folder
@@ -42,3 +46,9 @@ spl_autoload_register(
         }
     }
 );
+
+
+/**
+ * hand over to configuration
+ */
+require_once __DIR__.'/config.php';
