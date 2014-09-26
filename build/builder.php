@@ -11,6 +11,6 @@ $phar = new Phar(
     'thumbnailer.phar'
 );
 
-$phar->buildFromDirectory('../src', '/\.php$/');
+$phar->buildFromDirectory('../src', '/\.(php|ini)$/');
 
 $phar->setDefaultStub('cli/index.php', 'web/index.php');
