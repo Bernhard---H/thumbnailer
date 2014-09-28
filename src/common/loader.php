@@ -20,10 +20,10 @@ spl_autoload_register(
     function ($class) {
 
         // project-specific namespace prefix
-        $prefix = 'htlwy\\';
+        $prefix = 'Thumbnailer\\';
 
         // base directory for the namespace prefix
-        $base_dir = 'phar://thumbnailer.phar/vendor/htlwy/';
+        $base_dir = 'phar://thumbnailer.phar/vendor/Thumbnailer/';
 
         // does the class use the namespace prefix?
         $len = strlen($prefix);
