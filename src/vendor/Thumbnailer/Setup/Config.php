@@ -25,11 +25,11 @@ class Config implements \IteratorAggregate, \ArrayAccess, \Countable
     {
         if (empty(self::$config)) {
             // provide the user with a default configuration file
-            if (!file_exists(INSTALL_DIR.'/thumbnailer.ini')) {
-                copy(BASE_DIR.'/data/default.ini', INSTALL_DIR.'/thumbnailer.ini');
+            if (!file_exists(INSTALL_DIR.'/thumbnailer.ini.php')) {
+                copy(BASE_DIR.'/data/default.ini.php', INSTALL_DIR.'/thumbnailer.ini.php');
             }
-            $user_config = parse_ini_file(INSTALL_DIR.'/thumbnailer.ini', true);
-            $default_config = parse_ini_file(BASE_DIR.'/data/default.ini', true);
+            $user_config = parse_ini_file(INSTALL_DIR.'/thumbnailer.ini.php', true);
+            $default_config = parse_ini_file(BASE_DIR.'/data/default.ini.php', true);
 
             self::$config = array_merge($default_config, $user_config);
         }

@@ -1,3 +1,4 @@
+<?php exit; ?>
 [database]
 ; for further information please refere to:
 ; http://redbeanphp.com/connection
