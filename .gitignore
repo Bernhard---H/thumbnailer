@@ -1,2 +1,3 @@
 # build:
+build/thumbnailer.ini
 build/thumbnailer.phar
