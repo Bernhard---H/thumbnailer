@@ -32,6 +32,66 @@ class Config implements \IteratorAggregate, \ArrayAccess, \Countable
             $default_config = parse_ini_file(BASE_DIR.'/data/default.ini.php', true);
 
             self::$config = array_merge($default_config, $user_config);
+            $this->normalize();
+        }
+    }
+
+    /**
+     * normalizes the format of certain configurations in `self::$config`
+     * e.g. paths end with a slash
+     */
+    protected function normalize()
+    {
+        $dir = self::$config['dir'];
+
+        $dir['webserver'] = $this->normalizePath($dir['webserver']);
+        $dir['app'] = $this->normalizePath($dir['app']);
+
+        $dir['app'] = $this->mergeRelativePath($dir['webserver'], $dir['app']);
+
+        self::$config['dir'] = $dir;
+    }
+
+    /**
+     * makes sure that `$path` ends with a slash,
+     * converts (windows-)backslash into slash
+     *
+     * note: the function only supports paths to a directory
+     *
+     * @param string $path
+     * @return string
+     */
+    protected function normalizePath($path)
+    {
+        $path = str_replace('\\', '/', $path);
+        if (substr($path, -1) != '/') {
+            $path .= '/';
+        }
+        return $path;
+    }
+
+    /**
+     * Merges two variables containing a path.
+     *
+     * if `$sub` is a relative path (does not start with a slash)
+     *  it will simply be concatenated to `$main`
+     * if `$sub` is an absolute path (starting with a slash)
+     *  only `$sub` will be returned.
+     *
+     * @param string $main
+     * @param string $sub
+     *
+     * @return string
+     */
+    protected function mergeRelativePath($main, $sub)
+    {
+        if (substr($sub, 0, 1) == '/') {
+            return $sub;
+        } else {
+            if (substr($sub, 0, 2) == './') {
+                $sub = substr($sub, 2);
+            }
+            return $main.$sub;
         }
     }
 
@@ -102,7 +162,8 @@ class Config implements \IteratorAggregate, \ArrayAccess, \Countable
      *
      * @return \ArrayIterator|\Traversable
      */
-    public function getIterator() {
+    public function getIterator()
+    {
         return new \ArrayIterator(self::$config);
     }
 }

@@ -8,6 +8,8 @@ require_once 'phar://thumbnailer.phar/common/loader.php';
 
 $arguments = getopt('h', array('help'));
 
-if (isset($arguments['h']) || isset($arguments['help']) || empty($arguments)) {
+if (isset($arguments['h']) || isset($arguments['help'])) {
     include BASE_DIR.'/cli/help.php';
 }
+
+

@@ -1,4 +1,4 @@
-Thumbnailer VERSION by AUTHOR
+Thumbnailer VERSION by Bernhard Halbartschlager
 
 Usage: php thumbnailer.phar [options]
 
