@@ -1,3 +1,7 @@
 # build:
 build/thumbnailer.ini.php
 build/thumbnailer.phar
+
+# composer dependencies
+/vendor
+/composer.lock
