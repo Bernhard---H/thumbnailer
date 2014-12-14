@@ -13,9 +13,16 @@ interface PictureIdInterface
 {
 
     /**
-     * Every picture is identified by its sha1 hash value.
+     * Recreate the original object from its id
      *
-     * @return string a 40 character hex number (sha1) hash
+     * @param string $id
+     */
+    public function __construct($id);
+
+    /**
+     * Unique ID for every picture, e.g. a sha1 hash of the file
+     *
+     * @return string
      */
     public function getID();
 
