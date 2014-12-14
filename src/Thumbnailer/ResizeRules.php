@@ -8,8 +8,6 @@ namespace Thumbnailer;
 /**
  * Class ResizeType
  * @package Thumbnailer
- *
- *
  */
 final class ResizeRules
 {

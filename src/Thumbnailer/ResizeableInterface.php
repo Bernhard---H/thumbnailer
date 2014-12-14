@@ -21,11 +21,11 @@ interface ResizeableInterface {
      * If a rules object is provided but but does not set any of these rules, an `\InvalidArgumentException` must be
      * thrown.
      *
-     * @param $size
+     * @param PictureSizeInterface $size
      * @param ResizeRules $rules
      * @return mixed
      * @throws \InvalidArgumentException
      */
-    public function resize($size, ResizeRules $rules);
+    public function resize(PictureSizeInterface $size, ResizeRules $rules);
 
 }
