@@ -1,0 +1,25 @@
+{
+    "name": "thumbnailer/thumbnailer",
+    "description": "create and manage thumbnails in PHP",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bernhard Halbartschlager",
+            "email": "halbart.bernhard+thumbnailer@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/Bernhard---H/thumbnailer/issues",
+        "source": "https://github.com/Bernhard---H/thumbnailer"
+    },
+    "require": {
+        "monolog/monolog": "~1.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Thumbnailer\\": "src/Thumbnailer/"
+        }
+    },
+    "minimum-stability": "stable"
+}
