@@ -1,5 +1,6 @@
 {
     "name": "thumbnailer/thumbnailer",
+    "description": "create and manage thumbnails in PHP",
     "license": "MIT",
     "authors": [
         {

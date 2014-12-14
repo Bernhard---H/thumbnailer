@@ -17,17 +17,17 @@ final class ResizeRules
      * Do not change the aspect ratio, ignore the provided values if necessary;
      * Unless specifically requested never create a bigger picture than the original source picture.
      */
-    const KeepAspectRatio = 1;
+    const KEEP_ASPECT_RATIO = 1;
 
     /**
      * If used as only parameter: Use the exact parameters the user entered to create the new picture.
      * If in conjunction with other types: Try to get as close as possible to the users values without violation
      * other rules
      */
-    const MaxFit = 2;
+    const MAX_FIT = 2;
 
     /**
-     * Default value is `KeepAspectRatio` and `MaxFit`; to combine multiple settings add a single pipe character `|`
+     * Default value is `KEEP_ASPECT_RATIO` and `MAX_FIT`; to combine multiple settings add a single pipe character `|`
      * between them.
      * @param int $value
      */

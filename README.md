@@ -1,13 +1,5 @@
 # Thumbnailer
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Bernhard---H/thumbnailer/badges/quality-score.png?b=feature%2Freset)](https://scrutinizer-ci.com/g/Bernhard---H/thumbnailer/?branch=feature%2Freset)
 
-## Usage
-
-### CLI
-If accessed via a console Thumbnailer provides these options:
-
-<dl>
-    <dt>-h, --help</dt>
-    <dd>Displays a help message.</dd>
-</dl>
 
