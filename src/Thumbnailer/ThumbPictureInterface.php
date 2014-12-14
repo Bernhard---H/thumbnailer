@@ -19,5 +19,4 @@ interface ThumbPictureInterface extends PictureInterface
      * @return PictureInterface
      */
     public function getParentPicture();
-
 }

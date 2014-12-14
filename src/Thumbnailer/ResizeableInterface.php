@@ -11,8 +11,8 @@ namespace Thumbnailer;
  *
  * Object provides a method to create a new version of itself in a different size
  */
-interface ResizeableInterface {
-
+interface ResizeableInterface
+{
     /**
      * Creates a picture object with a different size.
      *
@@ -32,5 +32,4 @@ interface ResizeableInterface {
      * @throws \InvalidArgumentException
      */
     public function resize(PictureSizeInterface $size, ResizeRules $rules);
-
 }

@@ -16,6 +16,7 @@ interface PictureInterface extends LinkableInterface, PictureIdInterface, Resize
 
     /**
      * Sends the picture file to standard out, in other words to a browser
+     * @return void
      */
     public function echoPicture();
 }

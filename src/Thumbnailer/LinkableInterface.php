@@ -22,6 +22,7 @@ interface LinkableInterface
 
     /**
      * magic method: is an alias for toLink()
+     * @return string
      */
     public function __toString();
 

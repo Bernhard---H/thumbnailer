@@ -34,14 +34,14 @@ final class ResizeRules
     public function __construct($value = 3)
     {
         if ($value <= 0 || 3 < $value) {
-            throw new \InvalidArgumentException("Provided value '" . $value . "' is not in the range of ResizeType.");
+            throw new \InvalidArgumentException("Provided value '".$value."' is not in the range of ResizeType.");
         }
         $this->value = $value;
     }
 
     /**
      * Compares two objects of ResizeType. Returns `true` if the provided object is a subset of $this.
-     * @param ResizeRules $subset
+     * @param self $subset
      * @return bool
      */
     public function isSubset(self $subset)
@@ -54,9 +54,8 @@ final class ResizeRules
      */
     public function __toString()
     {
-        return (string)$this->value;
+        return (string) $this->value;
     }
-
 }
 
 

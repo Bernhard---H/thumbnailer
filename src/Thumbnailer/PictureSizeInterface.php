@@ -28,5 +28,4 @@ interface PictureSizeInterface
      * @return int
      */
     public function getHeight();
-
 }
