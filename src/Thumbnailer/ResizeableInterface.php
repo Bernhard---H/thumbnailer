@@ -21,6 +21,9 @@ interface ResizeableInterface {
      * If a rules object is provided but but does not set any of these rules, an `\InvalidArgumentException` must be
      * thrown.
      *
+     * Implementations should not create a new picture-file on a filesystem (or wherever a picture may be stored) but
+     * rather provide only the necessary data to create the file if requested by a user.
+     *
      * @param PictureSizeInterface $size
      * @param ResizeRules $rules
      * @return mixed
