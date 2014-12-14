@@ -11,12 +11,12 @@ namespace Thumbnailer;
  *
  *
  */
-interface ThumbPictureInterface extends LinkableInterface
+interface ThumbPictureInterface extends PictureInterface
 {
 
     /**
      * Get the original (parent) picture
-     * @return PictureReferenceInterface
+     * @return PictureInterface
      */
     public function getParentPicture();
 

@@ -24,9 +24,11 @@ interface ResizeableInterface {
      * Implementations should not create a new picture-file on a filesystem (or wherever a picture may be stored) but
      * rather provide only the necessary data to create the file if requested by a user.
      *
+     * Returned objects should not be used again as `resize` source but rather call the method on the parent picture
+     *
      * @param PictureSizeInterface $size
      * @param ResizeRules $rules
-     * @return mixed
+     * @return ThumbPictureInterface
      * @throws \InvalidArgumentException
      */
     public function resize(PictureSizeInterface $size, ResizeRules $rules);
