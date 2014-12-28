@@ -13,7 +13,6 @@ namespace Thumbnailer;
  */
 interface LinkableInterface
 {
-
     /**
      * Returns a valid URI which a browser can use to fetch the object (picture)
      * @return string

@@ -14,12 +14,6 @@ namespace Thumbnailer;
 interface PictureSizeInterface
 {
     /**
-     * @param int $width
-     * @param int $height
-     */
-    public function __construct($width, $height);
-
-    /**
      * @return int
      */
     public function getWidth();
